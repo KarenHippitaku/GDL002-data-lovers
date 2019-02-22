@@ -7,9 +7,9 @@
 
 window.data = {
 
-  chain: (word, quantity) => {
-    let finalInfo = mostrarPalabra() + " " + mostrarNumeros();
-    return finalInfo;
+  showAll: () => {
+    let data = JSON.stringify(INJURIES);
+    return data;
   },
 
 mostrarPalabra: () => {
