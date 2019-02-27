@@ -16,12 +16,12 @@ const INJURIES = require('../src/data/injuries/injuries.json');
 
 describe('injuries', () => {
   it('must be an object', () => {
-    expect(typeof INJURIES).toBe('object');
+    expect(typeof(INJURIES)).toBe('object');
   });
 });
 
 describe('fillElements', () => {
   it('must be a function', () => {
-    expect(data.fillElements(injuriesList, buttonElement)).toBe('buttonInjurie');
+    expect(data.fillElements()).toBe('function');
   });
 });

@@ -25,6 +25,10 @@ window.data = {
     }
  },
 
+// const buttonFunctions: () =>{
+  // return window.data.mostrarNumeros();
+// },
+
  //Función para mostrar años
 fillElements: (injuriesList, buttonElement) => {
   for(let i=0; i<injuriesList.length; i++) {
@@ -33,9 +37,10 @@ fillElements: (injuriesList, buttonElement) => {
      let array = injuriesList[i].Year;
      const newArray = parseInt(array);
      if(newArray<=2016 & newArray>=2000){ //restricción para descartar la información fuera del 2000 al 2016
-       buttonInjurie.innerHTML =`${newArray} <button id = "arrowDown${i}" onclick = buttonFunctions()>i</button><br />`;
+       buttonInjurie.innerHTML = `${newArray} <button id = "${array}">i</button><br />`;
       //Template string para generar botones numerados (con el número de la iteración correspondiente), a la par de la línea de información
        buttonElement.insertAdjacentElement("beforeend", buttonInjurie);
+       document.getElementById(array).addEventListener("click", () => {return window.data.mostrarNumeros();});
      }
    }
   }

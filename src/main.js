@@ -10,22 +10,19 @@ const showInjuries = () => {
     window.data.fillElements(injuriesList, buttonInjuriesList);
   };
 
-document.getElementById("filtrar").addEventListener("change",showInjuries);
+//document.getElementById("filtrar").addEventListener("change",showInjuries);
 
-const buttonFunctions = () =>{
-  window.data.mostrarNumeros(INJURIES);
-};
 
- //const filtrados = () =>{
-  // const values = document.getElementById("filtrar").value;
-  // switch(values){
-  //   case 'Year':
-    //   mostrarData();
-    //   showInjuries();
-    //   break;
-   // case "filterForRisk":
+ const filter = () =>{
+   const values = document.getElementById("filtrar").value;
+   switch(values){
+     case 'filterForYear':
+       mostrarData();
+       showInjuries();
+       break;
+    //case "filterForRisk":
 
-   //}
- //};
+   }
+ };
 //console.log(filterInfo());
-// document.getElementById("filterForYear").addEventListener("change",filterInfo);
+document.getElementById("filtrar").addEventListener("change",filter);
