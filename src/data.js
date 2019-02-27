@@ -6,46 +6,37 @@
 //};
 
 window.data = {
-
-  fillElements: (injuriesList, buttonElement) => {
-  for(let i=0; i<injuriesList.length; i++) {
-     let buttonInjurie = document.createElement("span");
-     buttonInjurie.id = 'Injurie' + [i];
-     let array = INJURIES[i].Year;
-     const newArray = parseInt(array);
-     if(newArray<=2016 & newArray>=2000){
-       buttonInjurie.innerHTML = `${newArray} <button class="triangle-down" id="arrowDown${i}"></button><br />`;
-       buttonElement.insertAdjacentElement("beforeend", buttonInjurie);
-     }
-   }
- },
-
-  showAll: () => {
-    let data = JSON.stringify(INJURIES);
-    return data;
-  },
-
-mostrarPalabra: () => {
+ mostrarPalabra: () => {
   let word;
   for(let i = 0; i <= INJURIES.length; i++){
     word = Object.keys(INJURIES[i]);
     word.forEach(function (element) {
-    document.write(element);
-  });
-}
-  return word;
-},
-
-mostrarNumeros: () => {
-  let quantity;
-  for(let i = 0; i <INJURIES.length; i++){
-      quantity = Object.values(INJURIES[i]);
-      quantity.forEach(function (element) {
       document.write(element);
-
   });
-}
-  return quantity;
-}
+ }
+  return word;
+ },
 
-}
+ mostrarNumeros: () => {
+   for(let i=16; i<=32; i++) {
+      Object.entries(INJURIES[i]).forEach(([key, value]) => {
+        document.getElementById("Resultado").innerHTML += key + ':' + value;
+      });
+    }
+ },
+
+ //Función para mostrar años
+fillElements: (injuriesList, buttonElement) => {
+  for(let i=0; i<injuriesList.length; i++) {
+     let buttonInjurie = document.createElement("span");
+     buttonInjurie.id = 'Injurie' + [i];
+     let array = injuriesList[i].Year;
+     const newArray = parseInt(array);
+     if(newArray<=2016 & newArray>=2000){ //restricción para descartar la información fuera del 2000 al 2016
+       buttonInjurie.innerHTML =`${newArray} <button id = "arrowDown${i}" onclick = buttonFunctions()>i</button><br />`;
+      //Template string para generar botones numerados (con el número de la iteración correspondiente), a la par de la línea de información
+       buttonElement.insertAdjacentElement("beforeend", buttonInjurie);
+     }
+   }
+  }
+};

@@ -5,18 +5,20 @@
     <title>Seguritas</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div id="root"></div>
     <script src="./data/injuries/injuries.js"></script>
 
-         <button id="Enter">Iniciar</button>
-         <section id="Info">
-           <select class="optionalMenu" name="filtrar">
-             <option value="0">Filtrar</option>
-             <option value="1">Por año</option>
-             <option value="2">Por tipo de riesgo</option>
-             <option value="3">Por no. de lesiones</option>
+      <button id="Enter">Iniciar</button>
+        <section id="Info">
+           <select class="optionalMenu" id="filtrar" onchange="filtrados()">
+             <option>Filtrar</option>
+             <option value="Year">Por año</option>
+             <option value="filterForRisk">Por tipo de riesgo</option>
+             <option value="filterForNumberOfInjuries">Por total de lesiones</option>
          </select>
+
          <div id="totalData">
 
          </div>

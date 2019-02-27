@@ -135,7 +135,7 @@ de terminado (_definition of done_) para cada una.
     - Hacer commit y vizualizar en gitHub pages.  
 
 
-  3. El usuario necesita un menú con opciones de _ordenado_ (ej. de mayor a menor) para visualizar información en orden específica.
+  3. El usuario necesita un menú con opciones de _ordenado_ (ej. de mayor a menor) para visualizar información en orden específico.
 
       **D.O.D**  
       - Al hacer click, el menú de _ordenado_ debe mostrar las opciones (ej. de mayor a menor).
@@ -145,11 +145,11 @@ de terminado (_definition of done_) para cada una.
       - Hacer commit y vizualizar en gitHub pages.
 
 
-  4. El usuario necesita un menú con opciones de _cálculo_ (ej. máximo y mínimo) para conocer el resultado calculado, de acuerdo a la información elegida, en la pantalla actual y la siguiente (pantalla #3).
+  4. El usuario necesita un menú con opciones de _cálculo_ (ej. máximo y mínimo) para conocer el resultado calculado, de acuerdo a la información elegida, en la pantalla actual.
 
       **D.O.D**  
       - Al hacer click, el menú de _cálculo_ debe mostrar las opciones (ej. máximo y mínimo).
-      - Al seleccionar una opción, el resultado debe aparecer en la pantalla actual y en la pantalla #3, sobre.
+      - Al seleccionar una opción, el resultado debe aparecer en la pantalla actual.
       - Debe pasar los test.
       - Debe recibir e implementar al menos un feedback.
       - Hacer commit y vizualizar en gitHub pages.  
@@ -158,7 +158,7 @@ de terminado (_definition of done_) para cada una.
 5. El usuario necesita un botón de comparación _(comparar)_ para visualizar información específica seleccionada (filtrada, ordenada, etc.) en la pantalla siguiente (pantalla #3).
 
     **D.O.D**  
-    - Al hacer click, el menú de _cálculo_ debe mostrar laopciones (ej. máximo y mínimo).
+    - Al hacer click, el menú de _cálculo_ debe mostrar las opciones (ej. máximo y mínimo).
     - Al seleccionar una opción, el resultado debe aparecer en la pantalla #3.
     - Debe pasar los test.
     - Debe recibir e implementar al menos un feedback.
