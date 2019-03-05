@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+<html lang="es">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+   <title>Data Lovers</title>
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <img class="image" alt="Seguritas_logo.png" src="http://drive.google.com/uc?export=view&id=15n22pSMafRcXVJs0mV2OAROeHHdxABLW">
+   <div class="horizontalLine">
+   </div>
+   <div class="verticalLine">
+   </div>
+
+   <section class="generalBlock" id="welcomeBlock"></section>
+   <script src="./data/injuries/injuries.js"></script>
+
+    <button class="buttonGreen" id="Enter">Iniciar</button>
+    <section class="generalBlock" id="infoBlock">
+
+      <select class="optionalMenu" id="filterMenu">
+        <option>Filtrar</option>
+        <option class="filterForYear" value="filterForYear">Por año</option>
+      </select>
+
+      <select class="optionalMenu" id="orderMenu">
+        <option>Ordenar</option>
+        <option value="lastToFirst">De mayor a menor</option>
+        <option value="FirstToLast">De menor a mayor</option>
+      </select>
+
+      <div id="totalData">
+      </div>
+      <div>
+        <span id="Resultado"></span>
+        <button class="close" id="closeModal">X</button>
+      </div>
+    </section>
+
+    <section class="generalBlock" id="compareBlock"></section>
+
+   <script src="data.js"></script>
+   <script src="main.js"></script>
+  <div class="footer">
+    <p class="text">© 2019 SEGURITAS S.A. de C.V., 42 Wallaby Way, Sidney, NSW | Seguritas es una aseguradora con Oportunidad de Empleo Equitativa y Seguro de vivienda justo.
+</p>
+<img alt="Verizon_logo.png" src="http://drive.google.com/uc?export=view&id=17mrj4OYE7IjTnezIzlpO2YR6q3NvuWus">
+<img alt="BBB_logo.png" src="http://drive.google.com/uc?export=view&id=13bPDABnn7go_LCr8BZcWulkIkrCpta5c">
+<img alt="Insuricare_logo.png" src="http://drive.google.com/uc?export=view&id=1jme43ZLrx5miSbm-2n5oxe0owxhqpnlo">
+  </div>
+</body>
 </html>
