@@ -20,8 +20,20 @@ describe('injuries', () => {
   });
 });
 
-describe('fillElements', () => {
+describe('filterByYear', () => {
   it('must be a function', () => {
-    expect(data.fillElements(INJURIES)).toBe('function');
+    expect(data.filterByYear(INJURIES)).toBe('function');
+  });
+});
+
+describe('filterByInjurie', () => {
+  it('must be a function', () => {
+    expect(data.filterByInjurie(INJURIES)).toBe('function');
+  });
+});
+
+describe('sortAlphabetically', () => {
+  it('must be a function', () => {
+    expect(data.sortAlphabetically(INJURIES)).toBe('function');
   });
 });

@@ -1,18 +1,72 @@
+* {
+  font-size: 14pt;
+
+}
+
 body {
-    display: grid;
-    grid-template-columns: repeat(5 minmax(100px, 1fr));
-    grid-gap: 0.5rem 1rem;
-    grid-auto-rows: minmax(70px auto);
-    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
     background: #ffffff;
-    font-family: @import url ("http://drive.google.com/uc?export=view&id=13dbi5kPspxh1YA6NHAMFeBD6SCzLbUpN");
-  
   }
-  
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 35vw 35vw 10vw 1fr;
+    /*grid-gap: 0.5rem 1rem;*/
+    grid-template-rows: 4rem 2rem auto minmax(1rem, 1fr) 3rem;
+    grid-template-areas:
+    "header header header header header"
+    ". . . . ." /*Los puntos pueden usarse para generar divisiones que estarán vacías pero necesitan un espacio definido. Como un margen personalizado.*/
+    ". content content content ."
+    ". . . . ."
+    "footer footer footer footer footer";
+    /*justify-content: flex-start;
+    font-family: @import url ("http://drive.google.com/uc?export=view&id=13dbi5kPspxh1YA6NHAMFeBD6SCzLbUpN");*/
+  }
+
+  header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 70vw 10vw 1fr;
+    grid-template-areas: ". homeButton idButton ."; /*Puedes personalizar las subdivisiones de las áreas a trabajar*/
+
+  }
+
+  #welcomeBlock {
+    grid-area: content;
+    grid-template-columns: 1rem auto auto auto 1rem;
+    grid-template-rows: 1em auto 1em 1em 0.5em 1em 0.5em 1em 0.5em auto 1em 1em 0.5em 1em 0.5em 1em 0.5em 1em 2em;
+    grid-template-areas: "..";
+
+
+  }
+
+
   #infoBlock {
     display: none;
   }
-  
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto 1fr;
+  grid-template-rows: 3rem;
+  grid-template-areas: ". footText logo logo logo .";
+}
+
+  .idButton {
+    max-width: 210px;
+    max-height: 170px;
+    color: #02669d;
+    font-size: 2rem;
+    background: #ffffff;
+    border-top: #ffffff;
+    border-right: #ffffff;
+    border-bottom: #038fdd;
+    border-left: #038fdd;
+    border-style: solid;
+  }
+
   .buttonGreen {
     width: 135px;
     height: 41px;
@@ -26,35 +80,26 @@ body {
     border-radius: 6px;
     align-self: center;
   }
-  
+
   .image {
     display: block;
     z-index: 3;
     width: 30%; /* you can use % */
     height: auto;
     margin: 10px auto;
-  
+
   }
-  
-  .footer {
+
+  /* .footer {
     display: inline-block;
     align-content: center;
     margin: 5em auto auto auto;
     font-family: sans-serif;
     font-size: 0.6em;
     color: #000677;
-  }
-  
-  /*.arrow-down {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 18px 10px 0 10px;
-    border-color: #000000 transparent transparent transparent;
-    padding-bottom: 10px;
-    background: #ffffff;
-  }*/
-  
+  } */
+
+
   .optionalMenu {
     display: inline-block;
     align-content: center;
@@ -62,9 +107,9 @@ body {
     height: 41px;
     /*background: #000677;*/
     border-radius: 6px;
-  
+
   }
-  
+
   .modal {
     /*display: none;  Hidden by default */
     position: fixed; /* Stay in place */
@@ -78,7 +123,7 @@ body {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+
   /* Modal Content */
   #Resultado {
     background-color: #eee;
@@ -90,7 +135,7 @@ body {
     float: left;
     justify-self: start;
   }
-  
+
   /* The Close Button */
   .close {
     display: none;
@@ -99,14 +144,14 @@ body {
     font-size: 18px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   button[name^="button"] {
     color: #ffffff;
     background: #02669d;
