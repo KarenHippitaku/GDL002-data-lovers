@@ -7,7 +7,7 @@
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",

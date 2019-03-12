@@ -12,50 +12,70 @@
    <main>
      <header> <img class="homeButton" alt="Seguritas_logo.png"
        src="http://drive.google.com/uc?export=view&id=15n22pSMafRcXVJs0mV2OAROeHHdxABLW">
-       <button class="idButton">id usuario</button>
-       <div class="horizontalLine">
+       <button class="idButton" id="idButton">id usuario</button>
+       <!-- <div class="horizontalLine">
        </div>
        <div class="verticalLine">
-       </div>
+       </div> -->
 
      </header>
 
+     <content>
    <section class="generalBlock" id="welcomeBlock">
+    <box class="blueBox" id="registerBox">
+      <h1 class="welcomeTitle" id="enterSign">Listo</h1>
+      <input class="input" id="inputUser" placeholder=" Usuario"></input>
 
-    <button class="buttonGreen" id="Enter">Iniciar</button>
-    </section>
+      <input class="input" id="inputPassword" placeholder=" Contraseña"></input>
+      <button class="buttonGreen" id="enterButton">Listo</button>
+      <p class="whiteText" id="o">- o -</p>
+      <h1 class="welcomeTitle" id="registerSign">Regístrate</h1>
+      <input class="input" id="inputUserR" placeholder=" Usuario"></input>
+      <input class="input" id="inputEmail" placeholder=" correo@ejemplo.com"></input>
+      <input class="input" id="inputId" placeholder=" #id"></input>
+      <input class="input" id="inputPasswordR" placeholder=" Contraseña"></input>
+      <button class="buttonGreen" id="registerButton">Listo</button>
+    </box>
+   </section>
 
     <section class="generalBlock" id="infoBlock">
 
       <select class="optionalMenu" id="filterMenu">
         <option>Filtrar</option>
-        <option class="filterForYear" value="filterForYear">Por año</option>
+        <option class="options" class="filterForYear" value="filterForYear">Por año</option>
       </select>
 
-      <select class="optionalMenu" id="orderMenu">
+      <select class="optionalMenu" id="sortMenu">
         <option>Ordenar</option>
-        <option value="lastToFirst">De mayor a menor</option>
-        <option value="FirstToLast">De menor a mayor</option>
+        <option class="options" value="lastToFirst">De mayor a menor</option>
+        <option class="options" value="FirstToLast">De menor a mayor</option>
+      </select>
+
+      <select class="optionalMenu" id="calculusMenu">
+        <option>Calcular</option>
+        <option class="options" value="YearWithFewerInjuries">Promedio por año</option>
       </select>
 
       <div id="totalData">
-      </div>
-      <div>
-        <span id="Resultado"></span>
+        <span class="dataSpan" id="Result"></span>
+        <!-- <div id="modal">
+        </div> -->
         <button class="close" id="closeModal">X</button>
       </div>
+      <button class="buttonGreen" id="compareButton">Comparar</button>
     </section>
 
     <section class="generalBlock" id="compareBlock"></section>
+  </content>
 
    <script src="data.js"></script>
    <script src="main.js"></script>
   <footer>
     <p class="footText">© 2019 SEGURITAS S.A. de C.V., 42 Wallaby Way, Sidney, NSW | Seguritas es una aseguradora
-      con Oportunidad de Empleo Equitativa y Seguro de vivienda justo.</p>
-<img class="logo" alt="Verizon_logo.png" src="http://drive.google.com/uc?export=view&id=17mrj4OYE7IjTnezIzlpO2YR6q3NvuWus">
-<img class="logo" alt="BBB_logo.png" src="http://drive.google.com/uc?export=view&id=13bPDABnn7go_LCr8BZcWulkIkrCpta5c">
-<img class="logo" alt="Insuricare_logo.png" src="http://drive.google.com/uc?export=view&id=1jme43ZLrx5miSbm-2n5oxe0owxhqpnlo">
+      con Oportunidad de Empleo Equitativa y Seguro de vivienda justo. </p>
+<img class="logo" id="logo1" alt="Verizon_logo.png" src="http://drive.google.com/uc?export=view&id=17mrj4OYE7IjTnezIzlpO2YR6q3NvuWus">
+<img class="logo" id="logo2" alt="BBB_logo.png" src="http://drive.google.com/uc?export=view&id=13bPDABnn7go_LCr8BZcWulkIkrCpta5c">
+<img class="logo" id="logo3" alt="Insuricare_logo.png" src="http://drive.google.com/uc?export=view&id=1jme43ZLrx5miSbm-2n5oxe0owxhqpnlo">
 </footer>
 </main>
 
