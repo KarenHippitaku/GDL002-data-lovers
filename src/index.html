@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
    <title>Data Lovers</title>
    <link rel="stylesheet" href="style.css" />
-   <script src="./data/injuries/injuries.js"></script>
+
 
  </head>
  <body>
@@ -24,16 +24,16 @@
    <section class="generalBlock" id="welcomeBlock">
     <box class="blueBox" id="registerBox">
       <h1 class="welcomeTitle" id="enterSign">Listo</h1>
-      <input class="input" id="inputUser" placeholder=" Usuario"></input>
+      <input class="input" id="inputUser" placeholder=" Usuario">
 
-      <input class="input" id="inputPassword" placeholder=" Contraseña"></input>
+      <input class="input" id="inputPassword" placeholder=" Contraseña">
       <button class="buttonGreen" id="enterButton">Listo</button>
       <p class="whiteText" id="o">- o -</p>
       <h1 class="welcomeTitle" id="registerSign">Regístrate</h1>
-      <input class="input" id="inputUserR" placeholder=" Usuario"></input>
-      <input class="input" id="inputEmail" placeholder=" correo@ejemplo.com"></input>
-      <input class="input" id="inputId" placeholder=" #id"></input>
-      <input class="input" id="inputPasswordR" placeholder=" Contraseña"></input>
+      <input class="input" id="inputUserR" placeholder=" Usuario">
+      <input class="input" id="inputEmail" placeholder=" correo@ejemplo.com">
+      <input class="input" id="inputId" placeholder=" #id">
+      <input class="input" id="inputPasswordR" placeholder=" Contraseña">
       <button class="buttonGreen" id="registerButton">Listo</button>
     </box>
    </section>
@@ -42,7 +42,7 @@
 
       <select class="optionalMenu" id="filterMenu">
         <option>Filtrar</option>
-        <option class="options" class="filterForYear" value="filterForYear">Por año</option>
+        <option class="options" value="filterForYear">Por año</option>
       </select>
 
       <select class="optionalMenu" id="sortMenu">
@@ -57,9 +57,10 @@
       </select>
 
       <div id="totalData">
-        <span class="dataSpan" id="Result"></span>
+        <span class="dataSpan" id="dataSpan"></span>
         <!-- <div id="modal">
         </div> -->
+        <span class="modalSpan" id="Resultado"></span>
         <button class="close" id="closeModal">X</button>
       </div>
       <button class="buttonGreen" id="compareButton">Comparar</button>
@@ -68,6 +69,7 @@
     <section class="generalBlock" id="compareBlock"></section>
   </content>
 
+   <script src="./data/injuries/injuries.js"></script>
    <script src="data.js"></script>
    <script src="main.js"></script>
   <footer>

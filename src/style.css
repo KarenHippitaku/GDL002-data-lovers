@@ -8,6 +8,7 @@
 
 * {
   font-family: 'myriad pro';
+  /* font-family: sans-serif; */
   align-content: center;
   box-sizing: border-box;
 }
@@ -40,7 +41,6 @@ body {
     grid-template-columns: 1fr 70vw 10vw 1fr;
     grid-template-rows: 4rem;
     grid-template-areas: ". homeButton idButton ."; /*Puedes personalizar las subdivisiones de las áreas a trabajar*/
-
   }
 
   content {
@@ -95,16 +95,14 @@ body {
     grid-area: infoBlock;
     display: none;
     grid-template-columns: 1fr auto 2rem auto 2rem auto 1fr;
-    grid-template-rows: 2rem 2rem auto 1rem 1rem auto auto;
+    grid-template-rows: 2rem 2rem auto 1rem 1rem auto;
     grid-template-areas:
     ". filterButton . sortButton . calculateButton ."
     ". . . . . . ."
     ". data data data data data ."
     ". . closeButton . . . ."
     ". . . . . . ."
-    ". modal modal modal modal . ."
     ". . . . . compareButton .";
-
   }
 
   #compareBlock {
@@ -281,23 +279,31 @@ footer {
   }
 
   #totalData {
-    grid-area: data;
-    display: grid;
+    /* grid-area: data; */
+    /* display: grid;
     grid-template-columns: 1fr auto 2rem auto 2rem auto 1fr;
-    grid-template-rows: 2rem auto auto auto auto auto 2rem;
+    grid-template-rows: 2rem auto auto auto auto auto auto 2rem;
     grid-template-areas:
     ". . . . . . ."
     ". dataSpan . dataSpan . dataSpan ."
+    ". . . . . . ."
     ". dataSpan . dataSpan . dataSpan ."
+    ". . . . . . ."
     ". dataSpan . dataSpan . dataSpan ."
+    ". . . . . . ."
     ". dataSpan . dataSpan . dataSpan ."
+    ". . . . . . ."
     ". dataSpan . dataSpan . dataSpan ."
-    ". . . . . . .";
+    ". modal modal modal modal modal ."
+    ". . . . . . ."; */
 
+  }
+  #dataSpan {
+    /* grid-area: dataSpan; */
   }
 
   .modal {
-    grid-area: modal;
+    /* grid-area: modal; */
     /*display: none;  Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -312,8 +318,9 @@ footer {
   }
 
   /* Contenido del modal */
-  #Result {
-    grid-area: dataSpan;
+  .modalSpan {
+    /* grid-area: modal; */
+    display: block;
     background-color: #eee;
     margin: auto;
     padding: 2rem;
@@ -346,7 +353,7 @@ footer {
 
 /* Botones dinámicos */
   button[name^="button"] {
-    /* grid-area: dataButton; */
+    /* grid-area: dataSpan; */
     color: #ffffff; /*Color del texto*/
     background: #02669d; /*Color del botón*/
     border: none; /*Borde o contorno: ninguno*/
